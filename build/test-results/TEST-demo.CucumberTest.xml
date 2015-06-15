@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="demo.CucumberTest" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="Lana.elbrysnetworks.com" time="0.0">
+  <properties/>
+  <system-out><![CDATA[14:07:03.159 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+14:07:03.166 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+14:07:03.166 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+14:07:03.174 [Test worker] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [cucumber/runtime/java/spring/cucumber-glue.xml]
+14:07:03.193 [Test worker] DEBUG o.s.b.f.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+14:07:03.221 [Test worker] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Loading schema mappings from [META-INF/spring.schemas]
+14:07:03.227 [Test worker] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Loaded schema mappings: {http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/aop/spring-aop-4.1.xsd=org/springframework/aop/config/spring-aop-4.1.xsd, http://www.springframework.org/schema/context/spring-context-3.1.xsd=org/springframework/context/config/spring-context-3.1.xsd, http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd=org/springframework/web/servlet/config/spring-mvc-4.1.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/security/spring-security-3.0.3.xsd=org/springframework/security/config/spring-security-3.0.3.xsd, http://www.springframework.org/schema/aop/spring-aop-3.2.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/security/spring-security-2.0.1.xsd=org/springframework/security/config/spring-security-2.0.1.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-4.1.xsd, http://www.springframework.org/schema/lang/spring-lang-4.1.xsd=org/springframework/scripting/config/spring-lang-4.1.xsd, http://www.springframework.org/schema/context/spring-context-4.0.xsd=org/springframework/context/config/spring-context-4.0.xsd, http://www.springframework.org/schema/rabbit/spring-rabbit-1.2.xsd=org/springframework/amqp/rabbit/config/spring-rabbit-1.2.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd=org/springframework/web/servlet/config/spring-mvc-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-4.1.xsd=org/springframework/beans/factory/xml/spring-tool-4.1.xsd, http://www.springframework.org/schema/lang/spring-lang-3.2.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/cache/spring-cache-3.2.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-4.1.xsd=org/springframework/ejb/config/spring-jee-4.1.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.2.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-4.1.xsd, http://www.springframework.org/schema/cache/spring-cache-4.1.xsd=org/springframework/cache/config/spring-cache-4.1.xsd, http://www.springframework.org/schema/aop/spring-aop-4.0.xsd=org/springframework/aop/config/spring-aop-4.0.xsd, http://www.springframework.org/schema/security/spring-security-2.0.xsd=org/springframework/security/config/spring-security-2.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.2.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd=org/springframework/web/servlet/config/spring-mvc-4.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans-3.2.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.1.xsd=org/springframework/aop/config/spring-aop-3.1.xsd, http://www.springframework.org/schema/lang/spring-lang-4.0.xsd=org/springframework/scripting/config/spring-lang-4.0.xsd, http://www.springframework.org/schema/rabbit/spring-rabbit-1.1.xsd=org/springframework/amqp/rabbit/config/spring-rabbit-1.1.xsd, http://www.springframework.org/schema/mvc/spring-mvc.xsd=org/springframework/web/servlet/config/spring-mvc-4.1.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd=org/springframework/web/servlet/config/spring-mvc-3.1.xsd, http://www.springframework.org/schema/beans/spring-beans-4.1.xsd=org/springframework/beans/factory/xml/spring-beans-4.1.xsd, http://www.springframework.org/schema/tool/spring-tool-4.0.xsd=org/springframework/beans/factory/xml/spring-tool-4.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.1.xsd=org/springframework/scripting/config/spring-lang-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx-3.2.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/cache/spring-cache-3.1.xsd=org/springframework/cache/config/spring-cache-3.1.xsd, http://www.springframework.org/schema/jee/spring-jee-4.0.xsd=org/springframework/ejb/config/spring-jee-4.0.xsd, http://www.springframework.org/schema/rabbit/spring-rabbit.xsd=org/springframework/amqp/rabbit/config/spring-rabbit-1.4.xsd, http://www.springframework.org/schema/task/spring-task-4.1.xsd=org/springframework/scheduling/config/spring-task-4.1.xsd, http://www.springframework.org/schema/tool/spring-tool-3.1.xsd=org/springframework/beans/factory/xml/spring-tool-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx-4.1.xsd=org/springframework/transaction/config/spring-tx-4.1.xsd, http://www.springframework.org/schema/cache/spring-cache-4.0.xsd=org/springframework/cache/config/spring-cache-4.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.1.xsd=org/springframework/ejb/config/spring-jee-3.1.xsd, http://www.springframework.org/schema/task/spring-task-3.2.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.1.xsd=org/springframework/beans/factory/xml/spring-beans-3.1.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-4.1.xsd, http://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/rabbit/spring-rabbit-1.0.xsd=org/springframework/amqp/rabbit/config/spring-rabbit-1.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-4.0.xsd=org/springframework/beans/factory/xml/spring-beans-4.0.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-4.1.xsd, http://www.springframework.org/schema/security/spring-security-2.0.4.xsd=org/springframework/security/config/spring-security-2.0.4.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.1.xsd=org/springframework/transaction/config/spring-tx-3.1.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/task/spring-task-4.0.xsd=org/springframework/scheduling/config/spring-task-4.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-4.0.xsd=org/springframework/transaction/config/spring-tx-4.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/security/spring-security-3.2.xsd=org/springframework/security/config/spring-security-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/util/spring-util-4.1.xsd=org/springframework/beans/factory/xml/spring-util-4.1.xsd, http://www.springframework.org/schema/task/spring-task-3.1.xsd=org/springframework/scheduling/config/spring-task-3.1.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-4.1.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/util/spring-util-3.2.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-4.1.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/rabbit/spring-rabbit-1.4.xsd=org/springframework/amqp/rabbit/config/spring-rabbit-1.4.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/security/spring-security-3.1.xsd=org/springframework/security/config/spring-security-3.1.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/util/spring-util-4.0.xsd=org/springframework/beans/factory/xml/spring-util-4.0.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-4.1.xsd, http://www.springframework.org/schema/context/spring-context-3.2.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/util/spring-util-3.1.xsd=org/springframework/beans/factory/xml/spring-util-3.1.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/cache/spring-cache.xsd=org/springframework/cache/config/spring-cache-4.1.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-4.1.xsd, http://www.springframework.org/schema/security/spring-security-2.0.2.xsd=org/springframework/security/config/spring-security-2.0.2.xsd, http://www.springframework.org/schema/context/spring-context-4.1.xsd=org/springframework/context/config/spring-context-4.1.xsd, http://www.springframework.org/schema/rabbit/spring-rabbit-1.3.xsd=org/springframework/amqp/rabbit/config/spring-rabbit-1.3.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd, http://www.springframework.org/schema/security/spring-security.xsd=org/springframework/security/config/spring-security-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/security/spring-security-3.0.xsd=org/springframework/security/config/spring-security-3.0.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-4.1.xsd}
+14:07:03.231 [Test worker] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/beans/spring-beans.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-4.1.xsd
+14:07:03.300 [Test worker] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/context/spring-context-3.1.xsd] in classpath: org/springframework/context/config/spring-context-3.1.xsd
+14:07:03.310 [Test worker] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.1.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.1.xsd
+14:07:03.321 [Test worker] DEBUG o.s.b.f.x.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+14:07:03.340 [Test worker] DEBUG o.s.b.f.x.DefaultNamespaceHandlerResolver - Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://www.springframework.org/schema/mvc=org.springframework.web.servlet.config.MvcNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler, http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/cache=org.springframework.cache.config.CacheNamespaceHandler, http://www.springframework.org/schema/c=org.springframework.beans.factory.xml.SimpleConstructorNamespaceHandler, http://www.springframework.org/schema/security=org.springframework.security.config.SecurityNamespaceHandler, http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler, http://www.springframework.org/schema/rabbit=org.springframework.amqp.rabbit.config.RabbitNamespaceHandler, http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler}
+14:07:03.364 [Test worker] DEBUG o.s.b.f.xml.XmlBeanDefinitionReader - Loaded 6 bean definitions from location pattern [cucumber/runtime/java/spring/cucumber-glue.xml]
+14:07:03.367 [Test worker] INFO  o.s.c.s.GenericXmlApplicationContext - Refreshing org.springframework.context.support.GenericXmlApplicationContext@4e34206b: startup date [Fri Jun 12 14:07:03 EDT 2015]; root of context hierarchy
+14:07:03.367 [Test worker] DEBUG o.s.c.s.GenericXmlApplicationContext - Bean factory for org.springframework.context.support.GenericXmlApplicationContext@4e34206b: org.springframework.beans.factory.support.DefaultListableBeanFactory@61f9dcce: defining beans [glueCodeScope,glueCodeScopeConfigurer,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor]; root of factory hierarchy
+14:07:03.392 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+14:07:03.393 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+14:07:03.442 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+14:07:03.445 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+14:07:03.482 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'glueCodeScopeConfigurer'
+14:07:03.482 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'glueCodeScopeConfigurer'
+14:07:03.482 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'glueCodeScopeConfigurer' to allow for resolving potential circular references
+14:07:03.493 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'glueCodeScope'
+14:07:03.494 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'glueCodeScope'
+14:07:03.494 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'glueCodeScope' to allow for resolving potential circular references
+14:07:03.494 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'glueCodeScope'
+14:07:03.528 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'glueCodeScopeConfigurer'
+14:07:03.529 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Registering scope 'cucumber-glue' with implementation [cucumber.runtime.java.spring.GlueCodeScope@4d417095]
+14:07:03.531 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+14:07:03.531 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+14:07:03.533 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+14:07:03.533 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+14:07:03.534 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+14:07:03.534 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+14:07:03.535 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+14:07:03.535 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+14:07:03.535 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+14:07:03.536 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+14:07:03.543 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+14:07:03.543 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+14:07:03.543 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+14:07:03.543 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+14:07:03.544 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor' to allow for resolving potential circular references
+14:07:03.544 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+14:07:03.544 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+14:07:03.544 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+14:07:03.544 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor' to allow for resolving potential circular references
+14:07:03.544 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+14:07:03.548 [Test worker] DEBUG o.s.c.s.GenericXmlApplicationContext - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@46a1aea1]
+14:07:03.551 [Test worker] DEBUG o.s.c.s.GenericXmlApplicationContext - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@1afdd9ed]
+14:07:03.579 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@61f9dcce: defining beans [glueCodeScope,glueCodeScopeConfigurer,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor]; root of factory hierarchy
+14:07:03.591 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'glueCodeScope'
+14:07:03.591 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'glueCodeScopeConfigurer'
+14:07:03.591 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+14:07:03.591 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+14:07:03.591 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+14:07:03.591 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+14:07:03.592 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+14:07:03.592 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+14:07:03.594 [Test worker] DEBUG o.s.c.s.GenericXmlApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@6fb08b78]
+14:07:03.594 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+14:07:03.596 [Test worker] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'spring.liveBeansView.mbeanDomain' in [systemProperties]
+14:07:03.596 [Test worker] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'spring.liveBeansView.mbeanDomain' in [systemEnvironment]
+14:07:03.596 [Test worker] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Could not find key 'spring.liveBeansView.mbeanDomain' in any property source. Returning [null]
+
+2 Scenarios (?[31m2 failed?[0m)
+6 Steps (?[31m2 failed?[0m, ?[36m4 skipped?[0m)
+0m13.278s
+
+cucumber.runtime.CucumberException: Failed to load ApplicationContext
+	at cucumber.runtime.java.spring.SpringFactory.getTestInstance(SpringFactory.java:162)
+	at cucumber.runtime.java.spring.SpringFactory.getInstance(SpringFactory.java:142)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:35)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:298)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:48)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:89)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:40)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:94)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:64)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)
+	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:94)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:72)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at cucumber.runtime.java.spring.SpringFactory.getTestInstance(SpringFactory.java:154)
+	... 51 more
+Caused by: java.lang.IllegalStateException: Tomcat connector in failed state
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:157)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:288)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:141)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:483)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:686)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320)
+	at org.springframework.boot.test.SpringApplicationContextLoader.loadContext(SpringApplicationContextLoader.java:103)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:68)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:86)
+	... 56 more
+
+cucumber.runtime.CucumberException: Failed to load ApplicationContext
+	at cucumber.runtime.java.spring.SpringFactory.getTestInstance(SpringFactory.java:162)
+	at cucumber.runtime.java.spring.SpringFactory.getInstance(SpringFactory.java:142)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:35)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:298)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:48)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:89)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:40)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:94)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:64)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)
+	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:94)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:72)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at cucumber.runtime.java.spring.SpringFactory.getTestInstance(SpringFactory.java:154)
+	... 51 more
+Caused by: java.lang.IllegalStateException: Tomcat connector in failed state
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:157)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:288)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:141)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:483)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:686)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320)
+	at org.springframework.boot.test.SpringApplicationContextLoader.loadContext(SpringApplicationContextLoader.java:103)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:68)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:86)
+	... 56 more
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

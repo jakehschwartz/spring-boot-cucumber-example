@@ -1,0 +1,77 @@
+<!--
+  ~ Copyright (c) 2013
+  ~ Elbrys Networks, Inc. All rights reserved
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+       xsi:schemaLocation="http://www.springframework.org/schema/rabbit
+           http://www.springframework.org/schema/rabbit/spring-rabbit-1.4.xsd
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="eventMessageConverter" class="demo.EventMessageConverter"/>
+    <bean id="rabbitMQMessageProcessor" class="demo.RabbitMQMessageProcessor"/>
+    <bean id="alertMessageListener" class="demo.AlertMessageListener"/>
+
+    <rabbit:connection-factory id="connectionFactory"
+                               host="${rabbitmq.host}"
+                               virtual-host="${rabbitmq.vhost.name}"
+                               username="${rabbitmq.vhost.username}"
+                               password="${rabbitmq.vhost.password}"
+                               publisher-confirms="true"/>
+
+    <rabbit:connection-factory id="analyticsConnectionFactory"
+                               host="${rabbitmq.host}"
+                               virtual-host="${rabbitmq.analytics.vhost}"
+                               username="${rabbitmq.analytics.vhost.username}"
+                               password="${rabbitmq.analytics.vhost.password}"
+                               publisher-confirms="true"/>
+
+<!--    <bean id="rabbitTxManager"
+          class="org.springframework.amqp.rabbit.transaction.RabbitTransactionManager">
+        <property name="connectionFactory" ref="connectionFactory"/>
+    </bean>-->
+
+    <rabbit:template id="amqpTemplate" connection-factory="connectionFactory" message-converter="eventMessageConverter"/>
+
+    <rabbit:template id="analyticsTemplate" connection-factory="analyticsConnectionFactory" queue="analytics"/>
+
+    <rabbit:admin id="rabbitAdmin" connection-factory="connectionFactory" auto-startup="true"/>
+
+    <rabbit:admin id="rabbitAnalyticsAdmin" connection-factory="analyticsConnectionFactory" auto-startup="true"/>
+
+    <rabbit:queue id="internal" name="${rabbitmq.internal.queue}" auto-declare="true" durable="true" auto-delete="false" declared-by="rabbitAdmin"/>
+
+    <rabbit:queue id="analytics" name="${rabbitmq.analytics.queue}" auto-declare="true" durable="true" auto-delete="false" declared-by="rabbitAnalyticsAdmin"/>
+
+    <rabbit:queue id="alert" name="${rabbitmq.alert.queue}" auto-declare="true" durable="true" auto-delete="false" declared-by="rabbitAnalyticsAdmin"/>
+
+    <rabbit:fanout-exchange name="${rabbitmq.analytics.exchange}" auto-declare="true" id="analytics_fanout" declared-by="rabbitAnalyticsAdmin">
+        <rabbit:bindings>
+            <rabbit:binding queue="analytics"/>
+        </rabbit:bindings>
+    </rabbit:fanout-exchange>
+
+    <rabbit:listener-container connection-factory="connectionFactory"
+                               acknowledge="auto"
+                               auto-startup="true"
+                               phase="1000"
+                               concurrency="10"
+                               id="internalListenerContainer"
+                               message-converter="eventMessageConverter"
+                               channel-transacted="false">
+        <rabbit:listener queues="${rabbitmq.internal.queue}" ref="rabbitMQMessageProcessor" method="processData"/>
+    </rabbit:listener-container>
+
+    <rabbit:listener-container connection-factory="analyticsConnectionFactory"
+                               acknowledge="auto"
+                               auto-startup="true"
+                               phase="1001"
+                               concurrency="10"
+                               id="alertListenerContainer"
+                               channel-transacted="false">
+        <rabbit:listener queues="${rabbitmq.alert.queue}" ref="alertMessageListener"/>
+    </rabbit:listener-container>
+</beans>

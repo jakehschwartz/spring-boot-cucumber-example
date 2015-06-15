@@ -1,0 +1,23 @@
+spring.profiles.active: default
+---
+spring:
+  profiles: default
+
+endpoints.enabled: false
+rabbitmq:
+  host: localhost
+  vhost:
+    name: tallac
+    username: tallac
+    password: tallac
+  internal.queue: internal
+  enabled: true
+  event.maxretry: 10
+  analytics:
+    vhost: cloud-service
+    vhost.username: csuser
+    vhost.password: csuser
+    queue: analytics
+    exchange: analytics.fanout
+    message.ttl.ms: 30000
+  alert.queue: alert

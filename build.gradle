@@ -1,0 +1,50 @@
+buildscript {
+    ext {
+        springBootVersion = '1.2.4.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") 
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot' 
+apply plugin: 'war'
+
+
+war {
+    baseName = 'spring-boot-cucumber-test'
+    version = '0.0.1-SNAPSHOT'
+}
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    providedRuntime
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+
+    testCompile ("org.springframework.boot:spring-boot-starter-test",
+        "info.cukes:cucumber-jvm:1.1.8",
+        "info.cukes:cucumber-core:1.1.8",
+        "info.cukes:cucumber-java:1.1.8",
+        "info.cukes:cucumber-junit:1.1.8",
+        "info.cukes:cucumber-spring:1.1.8",
+        'commons-io:commons-io:2.4')
+
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
